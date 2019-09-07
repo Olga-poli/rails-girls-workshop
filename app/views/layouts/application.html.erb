@@ -9,7 +9,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <div class="main-wrap">
+  <header class="main-header">
+    <a href="/" class="main-header__logo">
+      <%=image_tag('logo.svg', alt: 'BeFocused')%>
+    </a>
+    <a href="/" class="icon-btn">
+      <i class="icon-btn__icon icon icon-circle-info"></i>
+      <span class="icon-btn__txt">About</span>
+    </a>
+  </header>
+
+  <main class="main-content">
     <%= yield %>
-  </body>
+  </main>
+</div>
 </html>
